@@ -1,23 +1,36 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id 'io.qameta.allure' version '2.11.2'
 }
-
-group = 'ru.Jumpykot'
-version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
-    testImplementation 'com.codeborne:selenide:7.0.4'
-    testImplementation 'com.github.javafaker:javafaker:1.0.2'
-    testImplementation 'org.slf4j:slf4j-simple:2.0.7'
+def allureVersion = "2.21.0",
+    selenideVersion = "6.19.1"
+
+allure {
+    report {
+        version.set(allureVersion)
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5 {
+                adapterVersion.set(allureVersion)
+            }
+        }
+    }
 }
 
-test {
-    useJUnitPlatform()
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:$selenideVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "org.junit.jupiter:junit-jupiter:5.10.0",
+            'org.slf4j:slf4j-simple:2.0.7'
+    )
 }
 
 tasks.withType(Test) {
@@ -31,7 +44,7 @@ tasks.withType(Test) {
     }
 }
 
-task simple_task(type: Test) {
+task simple_test(type: Test) {
     useJUnitPlatform {
         includeTags()
     }
