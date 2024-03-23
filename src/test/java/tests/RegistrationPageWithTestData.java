@@ -66,6 +66,7 @@ public class RegistrationPageWithTestData extends TestBase {
     }
 
     @Test
+    @Tag("HomeWork tests")
     void minimalSuccessfulRegistrationTest() {
         step("Open form", () -> {
         registrationPage.openPage();
@@ -90,10 +91,13 @@ public class RegistrationPageWithTestData extends TestBase {
     }
 
     @Test
+    @Tag("HomeWork tests")
     void successfulRegistrationTest() {
-        registrationPage.openPage()
-
-                .setFirstName(testData.firstName)
+        step("Open form", () -> {
+            registrationPage.openPage();
+        });
+        step("Fill form", () -> {
+        registrationPage.setFirstName(testData.firstName)
                 .setLastName(testData.lastName)
                 .setUserEmail(testData.userEmail)
                 .setUserMobileNumber(testData.userPhoneNumber)
@@ -106,9 +110,10 @@ public class RegistrationPageWithTestData extends TestBase {
                 .setState(testData.usersState)
                 .setCity(testData.usersCity)
 
-                .submit()
-
-                .checkUserSubmitResults("Student Name", testData.firstName + " " + testData.lastName)
+                .submit();
+        });
+        step("Verify results", () -> {
+        registrationPage.checkUserSubmitResults("Student Name", testData.firstName + " " + testData.lastName)
                 .checkUserSubmitResults("Student Email", testData.userEmail)
                 .checkUserSubmitResults("Gender", testData.userGender)
                 .checkUserSubmitResults("Mobile", testData.userPhoneNumber)
@@ -118,14 +123,16 @@ public class RegistrationPageWithTestData extends TestBase {
                 .checkUserSubmitResults("Picture", testData.usersPicture)
                 .checkUserSubmitResults("Address", testData.userAddress)
                 .checkUserSubmitResults("State and City", testData.usersState + " " + testData.usersCity);
-
+        });
     }
 
     @Test
+    @Tag("HomeWork tests")
     void unsuccessfulRegistrationTest() {
+        step("Open form and submit", () -> {
         registrationPage.openPage()
                 .submit()
                 .checkUserUnsuccessfulSubmit();
-
+        });
     }
 }
