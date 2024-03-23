@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="simple.SkippedTests" tests="2" skipped="2" failures="0" errors="0" timestamp="2024-03-23T09:40:40" hostname="MBP-MacBook.HomeLAN" time="0.003">
+  <properties/>
+  <testcase name="someTest1()" classname="simple.SkippedTests" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="someTest()" classname="simple.SkippedTests" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
