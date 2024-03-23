@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import testdata.testData;
@@ -10,6 +11,7 @@ public class RegistrationPageWithTestData extends TestBase {
     testData testData = new testData();
 
     @Test
+    @Tag("Go")
     void minimalSuccessfulRegistrationTest() {
         registrationPage.openPage()
 
