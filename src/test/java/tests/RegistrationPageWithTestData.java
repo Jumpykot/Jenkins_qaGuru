@@ -57,16 +57,16 @@ public class RegistrationPageWithTestData extends TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
-    @AfterEach
-    void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
-    }
+//    @AfterEach
+//    void addAttachments() {
+//        Attach.screenshotAs("Last screenshot");
+//        Attach.pageSource();
+//        Attach.browserConsoleLogs();
+//        Attach.addVideo();
+//    }
 
     @Test
-    @Tag("HomeWork tests")
+    @Tag("HomeWorkTests")
     void minimalSuccessfulRegistrationTest() {
         step("Open form", () -> {
         registrationPage.openPage();
@@ -91,7 +91,7 @@ public class RegistrationPageWithTestData extends TestBase {
     }
 
     @Test
-    @Tag("HomeWork tests")
+    @Tag("HomeWorkTests")
     void successfulRegistrationTest() {
         step("Open form", () -> {
             registrationPage.openPage();
@@ -127,7 +127,7 @@ public class RegistrationPageWithTestData extends TestBase {
     }
 
     @Test
-    @Tag("HomeWork tests")
+    @Tag("HomeWorkTests")
     void unsuccessfulRegistrationTest() {
         step("Open form and submit", () -> {
         registrationPage.openPage()

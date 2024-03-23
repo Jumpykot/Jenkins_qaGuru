@@ -7,7 +7,7 @@ repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.21.0",
+def allureVersion = "2.25.0",
     selenideVersion = "7.0.2"
 
 allure {
@@ -16,6 +16,7 @@ allure {
     }
     adapter {
         aspectjWeaver.set(true)
+        aspectjVersion.set("1.9.21")
         frameworks {
             junit5 {
                 adapterVersion.set(allureVersion)
@@ -60,6 +61,6 @@ task demoqa_test(type: Test) {
 
 task Jenkins_hw_tests(type: Test) {
         useJUnitPlatform {
-            includeTags("HomeWork tests")
+            includeTags("HomeWorkTests")
         }
 }
