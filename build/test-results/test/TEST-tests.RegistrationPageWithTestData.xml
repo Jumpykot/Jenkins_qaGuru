@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.RegistrationPageWithTestData" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-23T21:03:10" hostname="MBP-MacBook.HomeLAN" time="12.809">
+  <properties/>
+  <testcase name="minimalSuccessfulRegistrationTest()" classname="tests.RegistrationPageWithTestData" time="12.809"/>
+  <system-out><![CDATA[     Запуск конфигураций
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=122.0.6261.94 Platform=linux
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 7.0.2
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.15.0 build revision: 1d14b5521b
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: RemoteWebDriver -> RemoteWebDriver: chrome on linux (0c3f2b1270063aced884ac318b47af2e), downloadsFolder: null
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig, webDriver=RemoteWebDriver: chrome on linux (0c3f2b1270063aced884ac318b47af2e), proxy=null, downloadsFolder=null] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
+]]></system-err>
+</testsuite>
